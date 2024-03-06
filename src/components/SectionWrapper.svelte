@@ -1,6 +1,5 @@
 <script lang="ts">
     export let id: string;
-
 </script>
 
 <section id={id} class={"min-h-screen flex flex-col px-4 "}>
