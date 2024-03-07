@@ -3,6 +3,7 @@
     export let productFeature: {
         description: string;
         featureList: string[];
+        imgUrl: string;
     };
 </script>
 
@@ -34,6 +35,22 @@
             <button class="specialBtnDark mr-auto font-semibold">
                 <p>Try free today &rarr;</p>
             </button>
+        </div>
+    </div>
+    
+    <div   
+        class={"flex flex-col dropShadow overflow-hidden rounded-b-lg " + (index % 2 === 1 ? ' order-1': ' ')}
+    >
+        <div class="rounded-xl h-8 sm:h-10 bg-white opacity-60 px-3 flex items-center gap-2">
+            {#each [1, 2, 3] as i}
+                <div class="rounded-full aspect-square w-2.5 sm:w-3 bg-indigo-300"/>
+            {/each}
+        </div>
+        <div class="flex flex-col bg-inherit gap-4 flex-1">
+            <img 
+                src={productFeature.imgUrl} 
+                alt="product-img"
+            />
         </div>
     </div>
 </div>
